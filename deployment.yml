@@ -1,0 +1,15 @@
+jobs:
+ - name: daily
+   targetName: dev
+   schedule: 0 12 * * *
+   timeout: 2h30m
+   steps:
+     - name: run models 
+       command: dbt run -m my_first_dbt_model
+     - name: test models
+       command: dbt test -m my_first_dbt_model
+ - name: nightly
+   schedule: 0 0 * * *
+   steps:
+     - name: run models
+       command: dbt run
