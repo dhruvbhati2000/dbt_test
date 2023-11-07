@@ -11,11 +11,11 @@
 
 with source_data as (
 
-    select 1 as id
+    select 'data nectar' as name
     union all
-    select null as id
+    select null as name
     union all
-    select 2 as id
+    select 'blue-whale' as name
 
 )
 
