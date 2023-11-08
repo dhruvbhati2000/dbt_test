@@ -5,9 +5,4 @@ jobs:
    timeout: 2h30m
    steps:
      - name: run models 
-       command: dbt run -m my_first_dbt_model
- - name: nightly
-   schedule: 0 0 * * *
-   steps:
-     - name: run models
-       command: dbt run
+       command: dbt run -m consumer_temp_1_test
