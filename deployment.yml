@@ -6,8 +6,3 @@ jobs:
    steps:
      - name: run models 
        command: dbt run -m consumer_temp_1_test
- - name: nightly
-   schedule: 0 0 * * *
-   steps:
-     - name: run models
-       command: dbt run
